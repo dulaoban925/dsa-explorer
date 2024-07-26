@@ -10,7 +10,7 @@ class BaseSqQueue {
   // 队列元素个数
   length = 0
   // 队尾指针
-  tail = -1
+  tail = 0
 
   constructor(data) {
     this.initQueue(data)
@@ -31,8 +31,8 @@ class BaseSqQueue {
       console.error('队列已满')
       return
     }
-    this.tail++
     this.data[this.tail] = e
+    this.tail++
     this.length++
   }
 
