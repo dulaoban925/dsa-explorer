@@ -11,7 +11,7 @@ class Node {
 }
 
 // 链表类
-class SLinkList {
+class LinkedList {
   // 头节点
   head
   // 链表长度
@@ -27,7 +27,7 @@ class SLinkList {
    */
   getElem(i) {
     // 获取头结点
-    let p = this.head
+    const p = this.head
     // 元素从第 1 个位置开始查找
     let j = 1
     // 遍历位置在 i 之前的节点
@@ -77,56 +77,3 @@ class SLinkList {
     return q.data
   }
 }
-
-/**
- * 头插法：单链表整表创建，包含 n 个随机数节点
- * @param {number} n 创建的单链表的节点个数
- */
-function createListHead(n) {
-  const slList = new SLinkList()
-
-  if (isNaN(n) || n < 0) {
-    throw new Error('参数不合法')
-  }
-  if (n === 0) return slList
-  for (let i = 0; i < n; i++) {
-    const p = new Node(Math.random() * 100)
-    p.next = slList.head.next
-    slList.head.next = p
-    slList.length++
-  }
-
-  return slList
-}
-
-const l = createList(10)
-console.log(l.head, l.getElem(10))
-
-/**
- * 尾插法：单链表整表创建，包含 n 个随机数节点
- * @param {number} n 创建的单链表的节点个数
- */
-function createListTail(n) {
-  // 空链表
-  const slList = new SLinkList()
-  // 尾结点
-  let r = null
-
-  if (isNaN(n) || n < 0) {
-    throw new Error('参数不合法')
-  }
-  if (n === 0) return slList
-  for (let i = 0; i < n; i++) {
-    const p = new Node(Math.random() * 100)
-    if (i === 0) {
-      slList.head.next = p
-      r = p
-    } else {
-      r.next = p
-      r = p
-    }
-    slList.length++
-  }
-  return slList
-}
-

@@ -1,7 +1,7 @@
 /**
  * 链队列节点类
  */
-class ChainQueueNode {
+class LinkedQueueNode {
   constructor(data) {
     this.data = data
     this.next = undefined
@@ -11,7 +11,7 @@ class ChainQueueNode {
 /**
  * 链队列类
  */
-class ChainQueue {
+class LinkedQueue {
   // 队头指针，指向头节点
   head
   // 队尾指针，指向队尾元素节点
@@ -21,13 +21,13 @@ class ChainQueue {
 
   constructor() {
     // 空状态 head 和 tail 指针同时指向头节点
-    this.head = this.tail = new ChainQueueNode(null)
+    this.head = this.tail = new LinkedQueueNode(null)
     this.length = 0
   }
 
   enQueue(data) {
     // 生成新节点 e
-    const e = new ChainQueueNode(data)
+    const e = new LinkedQueueNode(data)
     // 将当前队尾元素的后继节点赋值为 e
     this.tail.next = e
     // 将队尾指针指向新节点 e

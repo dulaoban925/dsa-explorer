@@ -3,7 +3,7 @@
  */
 
 // 链栈节点结构
-class LinkStackNode {
+class LinkedStackNode {
   // 数据域
   data = null
   // 后继指针域
@@ -15,7 +15,7 @@ class LinkStackNode {
 }
 
 // 链栈结构
-class LinkStack {
+class LinkedStack {
 
   // 栈顶指针
   top = null
@@ -38,7 +38,7 @@ class LinkStack {
   // 将数据 data 插入栈顶
   push(data) {
     // 1. 生成新的 **节点 s**。
-    const s = new LinkStackNode(data)
+    const s = new LinkedStackNode(data)
     // 2. 将当前栈顶元素赋值给 **节点 s** 的后继。
     s.next = this.top
     // 3. 将栈顶指针指向 **节点 s**。

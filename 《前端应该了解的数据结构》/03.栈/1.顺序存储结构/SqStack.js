@@ -1,7 +1,7 @@
 /**
  * 栈的顺序存储结构
  */
-class ListStack {
+class SqStack {
   // 栈容量
   MAX_SIZE = 10
   // 栈元素数据结合

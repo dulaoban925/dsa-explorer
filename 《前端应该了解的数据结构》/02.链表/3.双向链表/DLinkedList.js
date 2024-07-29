@@ -3,7 +3,7 @@
  */
 
 // 链表节点类
-class DNode {
+class DLinkedNode {
   constructor(data) {
     // 数据域
     this.data = data
@@ -15,13 +15,13 @@ class DNode {
 }
 
 // 链表类
-class DLinkList {
+class DLinkedList {
   // 头结点
   head
   // 链表长度
   length = 0
   constructor() {
-    this.head = new Node(null)
+    this.head = new DLinkedNode(null)
     this.length = 0
   }
 
@@ -57,7 +57,7 @@ class DLinkList {
     // 若不存在节点 p，返回 false 或报错
     if (!p) return false
     // 生成数据为 e 的节点 s
-    const s = new Node(e)
+    const s = new DLinkedNode(e)
 
     // 1.将 **节点 p** 赋值给 **节点 s** 的前驱。
     s.prior = p
